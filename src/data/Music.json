@@ -1,0 +1,7 @@
+{
+  "id": "Music",
+  "title": "Music",
+  "description": "Random Focus Music Generator",
+  "author": "hehebuai",
+  "code": "/widgets/Music/Music.tsx"
+}
