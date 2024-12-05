@@ -11,19 +11,19 @@ interface Playlist {
 
 const PLAYLISTS: Record<PlaylistMode, string[]> = {
   'Deep Work': [
-    'https://open.spotify.com/playlist/deep-work-1',
-    'https://open.spotify.com/playlist/deep-work-2',
-    'https://open.spotify.com/playlist/deep-work-3'
+    'https://open.spotify.com/album/4sANiExFTzMwtbhIT9SZrC?si=QCJhse4rQmSoYSiN_uFcrw',
+    'https://open.spotify.com/album/526GOHUzH201xPsVWgBi1s?si=zAwveLp_QGWJNJ8VY1Q0QQ',
+    'https://open.spotify.com/album/1KDNF2N9RbbEyw7kWVmj9V?si=TvYPG_IFSjCTQOiEZ5JfUQ'
   ],
   'Relaxation': [
-    'https://open.spotify.com/playlist/relax-1',
-    'https://open.spotify.com/playlist/relax-2',
-    'https://open.spotify.com/playlist/nature-sounds'
+    'https://open.spotify.com/album/0OtxwXVf6VDR4syzmzIrh6?si=G3NcNdIWT3yqla6Uiud7yQ',
+    'https://open.spotify.com/album/37FrBfOD8zEr4C3CyVijAp?si=EMapY7HQRBSkEg3KNLTqcg',
+    'https://open.spotify.com/album/5UdtXABO5pQswvLhTHaMiU?si=aDAJ9KWkTgWKe16tsszgug'
   ],
   'Creativity': [
-    'https://open.spotify.com/playlist/creative-1',
-    'https://open.spotify.com/playlist/creative-2',
-    'https://open.spotify.com/playlist/inspiration-mix'
+    'https://open.spotify.com/album/4fNR90EHhg4dWKCkmiqcZW?si=7GKDppVRS_O8MBowAaxxKA',
+    'https://open.spotify.com/album/3g7XNBeCVOZiBx325CvbR1?si=ISNIy_lNSUypaw8pdgXgaA',
+    'https://open.spotify.com/album/2bGFYmo7x3urPPYn9QQ4qU?si=v0mwbSZEQXKtQrxkAR_nAQ'
   ]
 };
 
