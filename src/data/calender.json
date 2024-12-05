@@ -1,0 +1,7 @@
+{
+  "id": "Calender",
+  "title": "Calender",
+  "description": "display time",
+  "author": "Jia",
+  "code": "/widgets/calender/calender.tsx"
+}
