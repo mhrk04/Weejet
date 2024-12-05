@@ -1,0 +1,7 @@
+{
+  "id": "StudyTime",
+  "title": "StudyTime",
+  "description": "Used to record Studied Time",
+  "author": "Xin Yang",
+  "code": "/widgets/StudyTime/StudyTime.tsx"
+}
