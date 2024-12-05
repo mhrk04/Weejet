@@ -1,0 +1,7 @@
+{
+  "id": "ToDoList",
+  "title": "ToDoList",
+  "description": "A to-do list",
+  "author": "Kelvin",
+  "code": "/widgets/ToDoList/ToDoList.tsx"
+}
