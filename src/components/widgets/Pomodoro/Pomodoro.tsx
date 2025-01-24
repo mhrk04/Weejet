@@ -21,11 +21,11 @@ function App() {
     audioRef.current.loop = true;
     
     // Request notification permission
-    if ('Notification' in window) {
-      Notification.requestPermission().then(permission => {
-        setNotificationPermission(permission);
-      });
-    }
+    // if ('Notification' in window) {
+    //   Notification.requestPermission().then(permission => {
+    //     setNotificationPermission(permission);
+    //   });
+    // }
     
     return () => {
       if (audioRef.current) {
@@ -70,12 +70,12 @@ function App() {
     }
     
     // Show notification if permitted
-    if (notificationPermission === 'granted') {
-      new Notification('Notion Pomodoro', {
-        body: 'Time to take a break!',
-        icon: '/favicon.ico'
-      });
-    }
+    // if (notificationPermission === 'granted') {
+    //   new Notification('Notion Pomodoro', {
+    //     body: 'Time to take a break!',
+    //     icon: '/favicon.ico'
+    //   });
+    // }
   };
 
   const handleReset = () => {
@@ -120,11 +120,7 @@ function App() {
             </button>
           </div>
           
-          {notificationPermission === 'denied' && (
-            <p className="text-xs text-red-500 text-center mt-2">
-              Enable notifications in Notion
-            </p>
-          )}
+          
         </div>
       </div>
     </div>
