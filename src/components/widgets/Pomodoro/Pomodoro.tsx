@@ -10,7 +10,6 @@ const ALARM_SOUND_URL = 'https://assets.mixkit.co/active_storage/sfx/2869/2869-p
 function App() {
   const [timeLeft, setTimeLeft] = useState(INITIAL_TIME);
   const [isRunning, setIsRunning] = useState(false);
-  const [notificationPermission, setNotificationPermission] = useState<NotificationPermission>('default');
   
   const timerRef = useRef<number>();
   const audioRef = useRef<HTMLAudioElement>();
@@ -20,12 +19,7 @@ function App() {
     audioRef.current = new Audio(ALARM_SOUND_URL);
     audioRef.current.loop = true;
     
-    // Request notification permission
-    // if ('Notification' in window) {
-    //   Notification.requestPermission().then(permission => {
-    //     setNotificationPermission(permission);
-    //   });
-    // }
+    
     
     return () => {
       if (audioRef.current) {
@@ -69,13 +63,7 @@ function App() {
       audioRef.current.play();
     }
     
-    // Show notification if permitted
-    // if (notificationPermission === 'granted') {
-    //   new Notification('Notion Pomodoro', {
-    //     body: 'Time to take a break!',
-    //     icon: '/favicon.ico'
-    //   });
-    // }
+    
   };
 
   const handleReset = () => {
@@ -94,7 +82,6 @@ function App() {
     <div className="mt-4 bg-white">
       <div className="h-full w-full flex items-center justify-center">
         <div className="w-full px-4">
-          <h1 className="text-xl font-bold text-center mb-3 text-gray-800">Pomodoro</h1>
           
           <div className="text-4xl font-mono text-center mb-4">
             {formatTime(timeLeft)}
