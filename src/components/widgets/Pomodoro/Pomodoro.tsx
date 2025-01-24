@@ -71,8 +71,8 @@ function App() {
     
     // Show notification if permitted
     if (notificationPermission === 'granted') {
-      new Notification('Pomodoro Timer', {
-        body: 'Time is up! Take a break.',
+      new Notification('Notion Pomodoro', {
+        body: 'Time to take a break!',
         icon: '/favicon.ico'
       });
     }
@@ -91,39 +91,41 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">Pomodoro Timer</h1>
-        
-        <div className="text-6xl font-mono text-center mb-8">
-          {formatTime(timeLeft)}
-        </div>
-        
-        <div className="flex gap-4 justify-center mb-6">
-          <button
-            onClick={handleStartPause}
-            className={`px-6 py-2 rounded-lg font-semibold text-white ${
-              isRunning 
-                ? 'bg-yellow-500 hover:bg-yellow-600' 
-                : 'bg-green-500 hover:bg-green-600'
-            }`}
-          >
-            {isRunning ? 'Pause' : 'Start'}
-          </button>
+    <div className="mt-4 bg-white">
+      <div className="h-full w-full flex items-center justify-center">
+        <div className="w-full px-4">
+          <h1 className="text-xl font-bold text-center mb-3 text-gray-800">Pomodoro</h1>
           
-          <button
-            onClick={handleReset}
-            className="px-6 py-2 rounded-lg font-semibold text-white bg-red-500 hover:bg-red-600"
-          >
-            Reset
-          </button>
+          <div className="text-4xl font-mono text-center mb-4">
+            {formatTime(timeLeft)}
+          </div>
+          
+          <div className="flex gap-2 justify-center">
+            <button
+              onClick={handleStartPause}
+              className={`px-4 py-1.5 rounded text-sm font-medium text-white ${
+                isRunning 
+                  ? 'bg-yellow-500 hover:bg-yellow-600' 
+                  : 'bg-green-500 hover:bg-green-600'
+              }`}
+            >
+              {isRunning ? 'Pause' : 'Start'}
+            </button>
+            
+            <button
+              onClick={handleReset}
+              className="px-4 py-1.5 rounded text-sm font-medium text-white bg-red-500 hover:bg-red-600"
+            >
+              Reset
+            </button>
+          </div>
+          
+          {notificationPermission === 'denied' && (
+            <p className="text-xs text-red-500 text-center mt-2">
+              Enable notifications in Notion
+            </p>
+          )}
         </div>
-        
-        {notificationPermission === 'denied' && (
-          <p className="text-red-500 text-sm text-center">
-            Please enable notifications to receive timer alerts
-          </p>
-        )}
       </div>
     </div>
   );
